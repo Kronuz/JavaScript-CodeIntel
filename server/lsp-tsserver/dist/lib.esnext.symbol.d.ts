@@ -18,15 +18,9 @@ and limitations under the License.
 /// <reference no-default-lib="true"/>
 
 
-declare namespace Intl {
-    type DateTimeFormatPartTypes = "day" | "dayPeriod" | "era" | "hour" | "literal" | "minute" | "month" | "second" | "timeZoneName" | "weekday" | "year";
-
-    interface DateTimeFormatPart {
-        type: DateTimeFormatPartTypes;
-        value: string;
-    }
-
-    interface DateTimeFormat {
-        formatToParts(date?: Date | number): DateTimeFormatPart[];
-    }
+interface Symbol {
+    /**
+     * expose the [[Description]] internal slot of a symbol directly
+     */
+    readonly description: string;
 }

@@ -19,14 +19,14 @@ and limitations under the License.
 
 
 declare namespace Intl {
-    type DateTimeFormatPartTypes = "day" | "dayPeriod" | "era" | "hour" | "literal" | "minute" | "month" | "second" | "timeZoneName" | "weekday" | "year";
+    type NumberFormatPartTypes = "currency" | "decimal" | "fraction" | "group" | "infinity" | "integer" | "literal" | "minusSign" | "nan" | "plusSign" | "percentSign";
 
-    interface DateTimeFormatPart {
-        type: DateTimeFormatPartTypes;
+    interface NumberFormatPart {
+        type: NumberFormatPartTypes;
         value: string;
     }
 
-    interface DateTimeFormat {
-        formatToParts(date?: Date | number): DateTimeFormatPart[];
+    interface NumberFormat {
+        formatToParts(number?: number): NumberFormatPart[];
     }
-}
+  }
